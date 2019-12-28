@@ -14,7 +14,7 @@ RUN apk update \
     && apk add --no-cache postgresql-dev \
     && pip install --upgrade pip \
     && pip install pipenv \
-    && pipenv install --ignore-pipfile --system \
+    && pipenv install --ignore-lock --system \
     && apk del build-deps \
     && chmod +x /entrypoint.sh
 
